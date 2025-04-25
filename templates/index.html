@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Banterbird</h1>
-    <img src = "https://i.redd.it/vq0ud3eojj881.jpg" alt="Italian Trulli">
+    <h1 class = "center">Banterbird</h1>
+    <button onclick="darkMode()">Dark Mode</button>
+    <img src = "https://i.redd.it/vq0ud3eojj881.jpg" alt="Italian Trulli" width="80" height="100">
     <div>
         Logged in as: <strong id="username">admin</strong>
     </div>
@@ -21,10 +22,9 @@
     <div id="feed"></div>
 
     <template id="post-template">
-        <div class="post">
+        <div class="post roundcorner">
             <p><strong class="username"></strong>: <span class="message"></span></p>
             <small class="timestamp"></small>
-            <hr>
         </div>
     </template>
 </body>

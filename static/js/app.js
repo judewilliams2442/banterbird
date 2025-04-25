@@ -12,7 +12,10 @@ function renderPost(post, isNew = false) {
         feed.appendChild(template);
     }
 }
-
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 
 async function submitPost() {
     const message = document.getElementById("postInput").value;
