@@ -10,7 +10,7 @@
     <button onclick="darkMode()">Dark Mode</button>
     <img src = "https://i.redd.it/vq0ud3eojj881.jpg" alt="Italian Trulli" width="80" height="100">
     <div>
-        Logged in as: <strong id="username">admin</strong>
+        Logged in as: <strong id="username">Dumbahh</strong>
     </div>
     <div>
         <h3>New Post</h3>
@@ -27,5 +27,8 @@
             <small class="timestamp"></small>
         </div>
     </template>
+    <script>
+        document.getElementById("username").innerText = localStorage.getItem("username")
+    </script>
 </body>
 </html>
