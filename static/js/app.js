@@ -56,3 +56,15 @@ window.onload = async () => {
         console.error("Error fetching posts:", error);
     }
 };
+
+setInterval(async () => {
+    try{
+        const response = await fetch("/api/posts");
+        const posts = await response.json();
+        document.getElementById("feed").innerHTML = ""; //clear the feed before rendering new 
+        posts.forEach(post => renderPost(post));
+    } catch (error) {
+        console.error("error", error);
+
+    }
+},5000);//poll every 5 seconds
